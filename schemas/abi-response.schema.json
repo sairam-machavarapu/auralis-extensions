@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/sairam-machavarapu/auralis-extensions/schemas/abi-response.schema.json",
+  "title": "Auralis ABI 1 response envelopes",
+  "$defs": {
+    "search": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["items"],
+      "properties": {
+        "items": { "type": "array", "maxItems": 100 },
+        "next_offset": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "identity": {
+      "type": "object",
+      "required": ["id"],
+      "properties": { "id": { "type": "string", "minLength": 1 } }
+    },
+    "artwork": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url"],
+      "properties": { "url": { "type": "string", "pattern": "^https://" } }
+    },
+    "lyrics": {
+      "type": "object",
+      "additionalProperties": false,
+      "anyOf": [{ "required": ["plain"] }, { "required": ["synced"] }],
+      "properties": {
+        "plain": { "type": "string", "maxLength": 524288 },
+        "synced": { "type": "string", "maxLength": 524288 },
+        "language": { "type": "string", "maxLength": 524288 }
+      }
+    },
+    "home_feed": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sections"],
+      "properties": {
+        "sections": { "type": "array", "maxItems": 50 },
+        "next_offset": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "download": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["url", "mime_type"],
+      "properties": {
+        "url": { "type": "string", "pattern": "^https://" },
+        "mime_type": { "type": "string", "pattern": "^audio/", "maxLength": 100 },
+        "file_name": { "type": "string", "minLength": 1, "maxLength": 180 },
+        "content_length": { "type": "integer", "minimum": 1 }
+      }
+    }
+  }
+}

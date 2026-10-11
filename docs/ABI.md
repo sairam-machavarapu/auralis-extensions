@@ -44,4 +44,14 @@ Extensions only need to export the functions for their declared capabilities. Ev
 
 Network access is mediated by the host and restricted to HTTPS hosts declared in `network_hosts`.
 
+Guest modules request HTTPS data through this single optional import:
+
+```text
+auralis.http_get(requestPointer: i32, requestLength: i32, outputPointer: i32, outputCapacity: i32) -> i32
+```
+
+The request is exactly `{ "url": "https://allowed.example/path" }`. A positive return value is the number of response bytes written. Negative values are `-1` permission denied, `-2` host blocked, `-3` timeout, `-4` network failure and `-5` invalid request or buffer. Redirects are not followed, requests time out after five seconds, and responses are limited to 2 MiB.
+
+Every capability response is checked against the ABI envelope before Auralis accepts it. See [`schemas/abi-response.schema.json`](../schemas/abi-response.schema.json).
+
 `resolve_download` may only return an authorized source descriptor. It does not grant filesystem access. Auralis performs the transfer through its download manager and imports a completed, validated file through the user-selected Storage Access Framework folder.
