@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "musicbrainz",
+  "display_name": "MusicBrainz",
+  "version": "1.0.0",
+  "description": "Search open music metadata and resolve Cover Art Archive artwork.",
+  "author": "Auralis contributors",
+  "homepage": "https://musicbrainz.org/",
+  "license": "MIT",
+  "icon": "icon.png",
+  "entrypoint": "extension.wasm",
+  "permissions": [
+    "network",
+    "metadata",
+    "artwork"
+  ],
+  "network_hosts": [
+    "musicbrainz.org"
+  ],
+  "min_app_version": "2.0.0"
+}

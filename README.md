@@ -17,6 +17,9 @@ After publication, add the raw `registry.json` URL in Auralis under **Settings â
 ## Build and validate
 
 ```bash
+npm install
+npm run build
+npm test
 python tools/build_registry.py --owner YOUR_GITHUB_USERNAME
 python tools/build_registry.py --owner YOUR_GITHUB_USERNAME --check
 ```
@@ -37,7 +40,7 @@ Auralis rejects unlisted fields, insecure URLs, unknown permissions, unsafe path
 
 Modules export `memory`, `alloc`, `dealloc`, and one or more capability functions. Capability functions receive `(requestPointer, requestLength)` and return a packed 64-bit value containing `(responsePointer << 32) | responseLength`. Requests and responses are UTF-8 JSON objects. See [`docs/ABI.md`](docs/ABI.md) for the complete export and permission table.
 
-The included sample implements `search` and returns an empty JSON object. It makes no network requests and asks only for the `metadata` permission.
+The offline sample implements `search` and returns an empty result list. The MusicBrainz provider demonstrates network-backed search and metadata plus Cover Art Archive artwork URLs. Auralis enforces each provider's declared hosts and permissions at runtime.
 
 ## Contributing
 

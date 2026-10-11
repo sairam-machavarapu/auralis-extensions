@@ -1,0 +1,13 @@
+{
+  "name": "auralis-extensions",
+  "private": true,
+  "scripts": {
+    "build:musicbrainz": "asc extensions/musicbrainz/assembly/index.ts --config extensions/musicbrainz/asconfig.json --transform json-as/transform",
+    "build": "npm run build:musicbrainz",
+    "test": "node tools/test_musicbrainz.mjs"
+  },
+  "devDependencies": {
+    "assemblyscript": "0.28.20",
+    "json-as": "1.6.1"
+  }
+}
