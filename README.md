@@ -35,7 +35,7 @@ Auralis rejects unlisted fields, insecure URLs, unknown permissions, unsafe path
 
 ## Runtime ABI
 
-Modules export `memory`, `alloc`, `dealloc`, and one or more capability functions. Capability functions receive `(requestPointer, requestLength)` and return a packed 64-bit value containing `(responsePointer << 32) | responseLength`. Requests and responses are UTF-8 JSON objects.
+Modules export `memory`, `alloc`, `dealloc`, and one or more capability functions. Capability functions receive `(requestPointer, requestLength)` and return a packed 64-bit value containing `(responsePointer << 32) | responseLength`. Requests and responses are UTF-8 JSON objects. See [`docs/ABI.md`](docs/ABI.md) for the complete export and permission table.
 
 The included sample implements `search` and returns an empty JSON object. It makes no network requests and asks only for the `metadata` permission.
 

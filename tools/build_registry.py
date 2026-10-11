@@ -16,7 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 ID = re.compile(r"[a-z0-9][a-z0-9._-]{1,63}\Z")
 VERSION = re.compile(r"\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?\Z")
 HOST = re.compile(r"(?=.{1,253}\Z)(?:[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\.)*[A-Za-z0-9](?:[A-Za-z0-9-]{0,61}[A-Za-z0-9])?\Z")
-PERMISSIONS = {"network", "metadata", "artwork", "download"}
+PERMISSIONS = {"network", "metadata", "artwork", "lyrics", "catalog", "download"}
 MANIFEST_KEYS = {"schema_version", "id", "display_name", "version", "description", "author", "homepage", "license", "icon", "entrypoint", "permissions", "network_hosts", "min_app_version"}
 REGISTRY_KEYS = {"schema_version", "updated_at", "extensions"}
 ITEM_KEYS = {"id", "display_name", "version", "description", "download_url", "sha256", "icon_url", "category", "tags", "min_app_version"}
