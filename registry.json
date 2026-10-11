@@ -3,6 +3,23 @@
   "updated_at": "2026-10-11T00:00:00Z",
   "extensions": [
     {
+      "id": "internet-archive",
+      "display_name": "Internet Archive Audio",
+      "version": "1.0.0",
+      "description": "Find Open Source Audio collections and resolve their downloadable audio files.",
+      "download_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/packages/internet-archive-1.0.0.lmx",
+      "sha256": "74dae93855d746990391a1aa5099d41b8f4ab1236b219cd165609315aa84c0df",
+      "icon_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/extensions/internet-archive/icon.png",
+      "category": "downloads",
+      "tags": [
+        "public-domain",
+        "creative-commons",
+        "flac",
+        "downloads"
+      ],
+      "min_app_version": "2.0.0"
+    },
+    {
       "id": "musicbrainz",
       "display_name": "MusicBrainz",
       "version": "1.0.0",

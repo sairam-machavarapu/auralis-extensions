@@ -2,6 +2,16 @@
   "updated_at": "2026-10-11T00:00:00Z",
   "extensions": [
     {
+      "source": "extensions/internet-archive",
+      "category": "downloads",
+      "tags": [
+        "public-domain",
+        "creative-commons",
+        "flac",
+        "downloads"
+      ]
+    },
+    {
       "source": "extensions/musicbrainz",
       "category": "metadata",
       "tags": [

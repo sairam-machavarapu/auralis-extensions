@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "internet-archive",
+  "display_name": "Internet Archive Audio",
+  "version": "1.0.0",
+  "description": "Find Open Source Audio collections and resolve their downloadable audio files.",
+  "author": "Auralis contributors",
+  "homepage": "https://archive.org/details/audio",
+  "license": "MIT",
+  "icon": "icon.png",
+  "entrypoint": "extension.wasm",
+  "permissions": [
+    "network",
+    "metadata",
+    "artwork",
+    "download"
+  ],
+  "network_hosts": [
+    "archive.org"
+  ],
+  "min_app_version": "2.0.0"
+}

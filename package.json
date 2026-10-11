@@ -3,8 +3,9 @@
   "private": true,
   "scripts": {
     "build:musicbrainz": "asc extensions/musicbrainz/assembly/index.ts --config extensions/musicbrainz/asconfig.json --transform json-as/transform",
-    "build": "npm run build:musicbrainz",
-    "test": "node tools/test_musicbrainz.mjs"
+    "build:internet-archive": "asc extensions/internet-archive/assembly/index.ts --config extensions/internet-archive/asconfig.json --transform json-as/transform",
+    "build": "npm run build:musicbrainz && npm run build:internet-archive",
+    "test": "node tools/test_musicbrainz.mjs && node tools/test_internet_archive.mjs"
   },
   "devDependencies": {
     "assemblyscript": "0.28.20",

@@ -1,0 +1,15 @@
+{
+  "targets": {
+    "release": {
+      "outFile": "extension.wasm",
+      "optimizeLevel": 3,
+      "shrinkLevel": 2,
+      "converge": true,
+      "noAssert": true
+    }
+  },
+  "options": {
+    "exportRuntime": false,
+    "runtime": "incremental"
+  }
+}

@@ -40,7 +40,7 @@ Auralis rejects unlisted fields, insecure URLs, unknown permissions, unsafe path
 
 Modules export `memory`, `alloc`, `dealloc`, and one or more capability functions. Capability functions receive `(requestPointer, requestLength)` and return a packed 64-bit value containing `(responsePointer << 32) | responseLength`. Requests and responses are UTF-8 JSON objects. See [`docs/ABI.md`](docs/ABI.md) for the complete export and permission table.
 
-The offline sample implements `search` and returns an empty result list. The MusicBrainz provider demonstrates network-backed search and metadata plus Cover Art Archive artwork URLs. Auralis enforces each provider's declared hosts and permissions at runtime.
+The offline sample implements `search` and returns an empty result list. MusicBrainz provides network-backed search, metadata and Cover Art Archive artwork. Internet Archive Audio searches the Open Source Audio collection and prefers FLAC, OGG, then MP3 when resolving a download. Auralis enforces each provider's declared hosts and permissions at runtime.
 
 ## Contributing
 
