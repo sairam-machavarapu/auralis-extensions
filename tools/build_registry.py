@@ -90,14 +90,15 @@ def package_bytes(source: Path, manifest: dict) -> bytes:
     import io
 
     output = io.BytesIO()
-    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_DEFLATED, compresslevel=9) as archive:
+    # Stored entries keep package bytes and SHA-256 identical across zlib versions and operating systems.
+    with zipfile.ZipFile(output, "w", compression=zipfile.ZIP_STORED) as archive:
         for name, data in (
             ("manifest.json", json_bytes(manifest)),
             (manifest["icon"], (source / manifest["icon"]).read_bytes()),
             (manifest["entrypoint"], (source / manifest["entrypoint"]).read_bytes()),
         ):
             info = zipfile.ZipInfo(name, (2026, 1, 1, 0, 0, 0))
-            info.compress_type = zipfile.ZIP_DEFLATED
+            info.compress_type = zipfile.ZIP_STORED
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)
     return output.getvalue()
