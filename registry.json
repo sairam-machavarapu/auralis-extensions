@@ -8,7 +8,7 @@
       "version": "1.0.0",
       "description": "Minimal offline extension demonstrating the Auralis WebAssembly ABI.",
       "download_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/packages/auralis-sample-1.0.0.lmx",
-      "sha256": "a67dcab5ec606aebc1c593713a67d0f5c257f005ccb1cd1fe1898d1fb7d2360e",
+      "sha256": "b322748d9a7b921d569d8f18ba5090edf7addc22cc33addf6e51f09558b76dcd",
       "icon_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/extensions/sample-provider/icon.png",
       "category": "sample",
       "tags": [

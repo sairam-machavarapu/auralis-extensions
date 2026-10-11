@@ -99,6 +99,10 @@ def package_bytes(source: Path, manifest: dict) -> bytes:
         ):
             info = zipfile.ZipInfo(name, (2026, 1, 1, 0, 0, 0))
             info.compress_type = zipfile.ZIP_STORED
+            info.create_system = 3
+            info.create_version = 20
+            info.extract_version = 20
+            info.flag_bits = 0
             info.external_attr = 0o100644 << 16
             archive.writestr(info, data)
     return output.getvalue()
