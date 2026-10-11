@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-10-11T00:00:00Z",
+  "extensions": [
+    {
+      "id": "auralis-sample",
+      "display_name": "Auralis Sample",
+      "version": "1.0.0",
+      "description": "Minimal offline extension demonstrating the Auralis WebAssembly ABI.",
+      "download_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/packages/auralis-sample-1.0.0.lmx",
+      "sha256": "10652938eb676cab9e43b7779c3dded6e35f3dadff0c8f16c8a84879679672b9",
+      "icon_url": "https://raw.githubusercontent.com/sairam-machavarapu/auralis-extensions/main/extensions/sample-provider/icon.png",
+      "category": "sample",
+      "tags": [
+        "metadata",
+        "offline",
+        "reference"
+      ],
+      "min_app_version": "2.0.0"
+    }
+  ]
+}

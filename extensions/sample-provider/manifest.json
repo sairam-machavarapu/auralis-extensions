@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "id": "auralis-sample",
+  "display_name": "Auralis Sample",
+  "version": "1.0.0",
+  "description": "Minimal offline extension demonstrating the Auralis WebAssembly ABI.",
+  "author": "Auralis contributors",
+  "homepage": "https://github.com/sairam-machavarapu/auralis-extensions",
+  "license": "MIT",
+  "icon": "icon.png",
+  "entrypoint": "extension.wasm",
+  "permissions": [
+    "metadata"
+  ],
+  "network_hosts": [],
+  "min_app_version": "2.0.0"
+}

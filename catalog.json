@@ -1,0 +1,14 @@
+{
+  "updated_at": "2026-10-11T00:00:00Z",
+  "extensions": [
+    {
+      "source": "extensions/sample-provider",
+      "category": "sample",
+      "tags": [
+        "metadata",
+        "offline",
+        "reference"
+      ]
+    }
+  ]
+}
